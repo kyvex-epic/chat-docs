@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Overview" id="Overview" help-id="test">
+
+
+
+    <section-starting-page>
+        <title>About</title>
+        <description>
+            A real-time messaging application committed to delivering Discord-like core functionality & prioritizing
+            user data privacy.
+        </description>
+
+        <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
+        <spotlight>
+            <a href="intro.topic" type="search">Read more</a>
+        </spotlight>
+
+        <!--    Add several topics that are most important for this section.    -->
+
+        <misc>
+        <cards>
+            <title>Get involved</title>
+            <a href="https://github.com/beauthebeau"
+               type="open-source" summary="Check out the source code on Github">Github</a>
+            <a href="https://discord.gg/JSNvTfE5zy"
+               type="community" summary="Join us on Discord">Discord</a>
+
+            <a href="DB-Models.topic" type="data">Database Models</a>
+            <a href="API-Endpoints.topic" type="start">API Endpoints</a>
+        </cards>
+        </misc>
+
+    </section-starting-page>
+
+</topic>

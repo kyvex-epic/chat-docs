@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       id="guildModel" title="Guild Model">
+
+    <link-summary>The Guild Model is the model that represents the guild in the database. It is used to store
+        information about the guild.
+    </link-summary>
+    <card-summary>The Guild Model is the model that represents the guild in the database. It is used to store
+        information about the guild.
+    </card-summary>
+
+
+    <title>Guild Model</title>
+    <p>The Guild Model is the model that represents the guild in the database. It is used to store information about the
+        guild,</p>
+    <chapter title="Fields" id="fields" collapsible="true">
+        <table>
+            <tr>
+                <td>Field Name</td>
+                <td>Type</td>
+                <td>Description</td>
+                <td>Extra Info</td>
+            </tr>
+            <tr>
+                <td>
+                    <control>Guild</control>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>Integer</td>
+                <td>The ID of the guild.</td>
+                <td>Primary Key</td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>String</td>
+                <td>The name of the guild.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td>String</td>
+                <td>The description of the guild.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <control>Relationships</control>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>messages</td>
+                <td>Relation</td>
+                <td>The messages sent in the guild.</td>
+                <td>One to Many</td>
+            </tr>
+            <tr>
+                <td>users</td>
+                <td>Relation</td>
+                <td>The users in the guild.</td>
+                <td>Many to Many</td>
+            </tr>
+            <tr>
+                <td>roles</td>
+                <td>Relation</td>
+                <td>The roles in the guild.</td>
+                <td>Many to Many</td>
+            </tr>
+            <tr>
+                <td>
+                    <control>Timestamps</control>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>created_at</td>
+                <td>DateTime</td>
+                <td>The time the guild was created.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>updated_at</td>
+                <td>DateTime</td>
+                <td>The time the guild was updated.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <control>Customisation</control>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>icon</td>
+                <td>Binary</td>
+                <td>The icon of the guild.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>banner</td>
+                <td>Binary</td>
+                <td>The banner of the guild.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <control>Verification</control>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>verified</td>
+                <td>Boolean</td>
+                <td>Whether the guild is verified.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>partner</td>
+                <td>Boolean</td>
+                <td>Whether the guild is a partner guild.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <control>Security</control>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>private</td>
+                <td>Boolean</td>
+                <td>Whether the guild is private.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <control>Misc</control>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>vanity_url</td>
+                <td>String</td>
+                <td>The vanity URL of the guild.</td>
+                <td></td>
+            </tr>
+        </table>
+    </chapter>
+
+</topic>

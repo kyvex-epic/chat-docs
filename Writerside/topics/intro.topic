@@ -1,0 +1,92 @@
+<topic xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="About" id="about">
+    <card-summary>This information is displayed in the card on the starting page.</card-summary>
+    <title>About</title>
+    <p>Kyvex Chat is a real-time messaging application reminiscent of Discord, crafted with Node.js, Express, Socket.io,
+        and MongoDB. We are committed to delivering Discord-like core functionality while prioritizing user data
+        security and privacy.</p>
+    <chapter title="Features" id="features">
+        <list>
+            <li>
+                <control>Real-time messaging</control>
+                Kyvex Chat uses Socket.io to provide real-time messaging between users. Messages are sent and received
+                instantly, and users can see when other users are typing.
+            </li>
+            <li>
+                <control>User authentication</control>
+                Kyvex Chat uses JSON Web Tokens (<code>JWT</code>) to authenticate users. Users can create an account,
+                log in, and log out. Passwords are hashed and salted using <code>bcrypt</code>.
+            </li>
+            <li>
+                <control>Guilds and channels</control>
+                Kyvex Chat allows users to create guilds and channels, and invite other users to join them. Users
+                can also leave guilds.
+            </li>
+            <li>
+                <control>Direct messaging</control>
+                Kyvex Chat allows users to send private messages to other users. Users can also block other users from
+                sending them messages.
+            </li>
+        </list>
+    </chapter>
+    <chapter title="Technologies" id="technologies">
+        <list>
+            <li>
+                <control>Node.js</control>
+                The foundation of the server-side logic, managing the application's core functionality.
+            </li>
+            <li>
+                <control>Express</control>
+                A web application framework for routing and handling HTTP requests.
+            </li>
+            <li>
+                <control>Socket.io</control>
+                Enabling real-time communication for chat functionality.
+            </li>
+            <li>
+                <control>MongoDB</control>
+                The choice of a database system to store user data, guild information, channels, and messages
+            </li>
+            <li>
+                <control>Mongoose</control>
+                An Object Data Modeling (ODM) library for MongoDB and Node.js.
+            </li>
+        </list>
+    </chapter>
+    <chapter title="API File Structure" id="api-file-structure">
+        <p>This is the very basic file structure of the API, with a brief description of the purpose of each directory
+            and file.</p>
+        <p>Below is a structured overview of the API file system, detailing the purpose of each directory and file:</p>
+        <list>
+            <li><code>src/middleware/</code>: This directory houses middleware functions responsible for user
+                authentication and request handling. These functions ensure secure and efficient communication between
+                the client and server.
+            </li>
+            <li><code>src/controllers/</code>: The control logic for each API route resides here. These controllers
+                process incoming requests, enabling the server to generate appropriate responses.
+            </li>
+            <li><code>src/routes/</code>: URL routes and their corresponding controllers are defined in this directory.
+                It forms the backbone of the API's routing system, connecting incoming requests to their respective
+                controllers.
+            </li>
+            <li><code>src/models/</code>: Data models created using Mongoose for MongoDB. These models represent the
+                structure and relationships of data entities within the application.
+            </li>
+            <li><code>src/utils/</code>: This directory contains reusable utility functions and helper modules that
+                contribute to various aspects of the API. It encourages code modularity and simplifies maintenance.
+            </li>
+            <li><code>src/index.js</code>: The primary entry point for the API server, where server setup,
+                configuration, and route registration take place.
+            </li>
+            <li><code>package.json</code>: Contains the API's configuration and dependency information, making it easy
+                to manage packages and configure the development environment.
+            </li>
+        </list>
+    </chapter>
+    <chapter title="Future Development" id="future-development">
+        <p>Our team is actively working on enhancing Kyvex Chat's features and security. In the near future, we plan to
+            implement end-to-end encryption for direct messages, ensuring the highest level of privacy for our users.
+            Stay tuned for exciting updates!</p>
+    </chapter>
+</topic>

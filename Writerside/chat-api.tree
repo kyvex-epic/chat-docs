@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="chat-api"
+                 name="Chat API"
+                 start-page="Overview.topic">
+
+    <toc-element topic="Overview.topic"/>
+    <toc-element topic="intro.topic"/>
+    <toc-element topic="DB-Models.topic">
+        <toc-element topic="userModel.topic"/>
+        <toc-element topic="guildModel.topic"/>
+    </toc-element>
+    <toc-element topic="API-Endpoints.topic">
+        <toc-element topic="userRoutes.topic"/>
+        <toc-element topic="guildRoutes.topic"/>
+    </toc-element>
+</instance-profile>
