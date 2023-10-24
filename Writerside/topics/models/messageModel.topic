@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       id="messageModel" title="Message Model">
+
+    <link-summary>The Channel Model represents the structure and attributes of channels.</link-summary>
+
+    <title>Channel Model</title>
+    <p>The Channel Model defines the attributes and properties of channels used.</p>
+
+    <chapter title="Fields" id="fields" collapsible="false">
+        <title>Fields</title>
+
+        <deflist id="message">
+
+            <def title="id">
+                <code>String</code><code>Primary Key</code>
+                <p>Unique identifier for the message.</p>
+            </def>
+
+            <def title="guild">
+                <code>relational</code> <code>Required</code>
+                <p>The guild this channel belongs to.</p>
+            </def>
+
+            <def title="channel">
+                <code>relational</code> <code>Required</code>
+                <p>The channel this message belongs to.</p>
+            </def>
+
+            <def title="author">
+                <code>relational</code> <code>Required</code>
+                <p>The user who sent the message.</p>
+            </def>
+
+            <def title="content">
+                <code>String</code> <code>Required</code>
+                <p>The content of the message.</p>
+            </def>
+
+            <def title="contentHistory">
+                <code>Array</code> <code>Default: []</code>
+                <p>Array of previous content of the message.</p>
+            </def>
+
+            <def title="attachments">
+                <code>Array</code> <code>Default: []</code>
+                <p>Array of attachments sent with the message.</p>
+            </def>
+
+            <def title="reactions">
+                <code>Array</code> <code>Default: []</code>
+                <p>Array of reactions sent with the message.</p>
+            </def>
+
+        </deflist>
+
+        <deflist id="timestamps">
+
+            <def title="createdAt">
+                <code>Timestamp</code> <code>Default: Current Time</code>
+                <p>Time the channel was created.</p>
+            </def>
+
+            <def title="updatedAt">
+                <code>Timestamp</code> <code>Default: Current Time</code>
+                <p>Time the channel was last updated.</p>
+            </def>
+
+            <def title="editedAt">
+                <code>Timestamp</code> <code>Default: null</code>
+                <p>Time the channel was last edited.</p>
+            </def>
+
+        </deflist>
+
+        <deflist id="moderation">
+
+            <def title="isDeleted">
+                <code>Boolean</code> <code>Default: false</code>
+                <p>Whether the message has been deleted.</p>
+            </def>
+
+            <def title="isEdited">
+                <code>Boolean</code> <code>Default: false</code>
+                <p>Whether the message has been edited.</p>
+            </def>
+
+            <def title="isPinned">
+                <code>Boolean</code> <code>Default: false</code>
+                <p>Whether the message has been pinned.</p>
+            </def>
+
+            <def title="isTTS">
+                <code>Boolean</code> <code>Default: false</code>
+                <p>Whether the message is a text-to-speech message.</p>
+            </def>
+
+
+
+        </deflist>
+
+    </chapter>
+
+</topic>

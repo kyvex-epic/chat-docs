@@ -45,6 +45,35 @@
                 <p>The parent category of this channel.</p>
             </def>
 
+            <def title="messages">
+                <code>relational</code>
+                <p>The messages in this channel.</p>
+            </def>
+
+            <def title="pinnedMessages">
+                <code>relational</code>
+                <p>The pinned messages in this channel.</p>
+            </def>
+
+        </deflist>
+
+        <deflist id="timestamps">
+
+            <def title="createdAt">
+                <code>Timestamp</code> <code>Default: Current Time</code>
+                <p>Time the channel was created.</p>
+            </def>
+
+            <def title="updatedAt">
+                <code>Timestamp</code> <code>Default: Current Time</code>
+                <p>Time the channel was last updated.</p>
+            </def>
+
+            <def title="createdBy">
+                <code>relational</code>
+                <p>The user who created the channel.</p>
+            </def>
+
         </deflist>
 
         <deflist id="moderation">

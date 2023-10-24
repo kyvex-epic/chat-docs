@@ -11,12 +11,12 @@
 
         <spotlight>
             <a href="guildModel.topic" type="server"/>
-            <a href="userModel.topic" type="user"/>
+            <a href="userModel.topic" type="account"/>
         </spotlight>
 
         <primary>
             <a href="channelModel.topic" type="location"/>
-            <a href="channelModel.topic" type="location"/>
+            <a href="messageModel.topic" type="community"/>
         </primary>
 
 
