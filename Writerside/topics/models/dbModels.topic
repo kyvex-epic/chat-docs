@@ -9,15 +9,57 @@
         <title>DB Models</title>
         <description>This section describes the API endpoints that are available for use.</description>
 
+        <!--
+            13 Models Total
+            ==================
+
+            ⎡ Completed (5/13)
+            │ ==================
+            │   ✔ user
+            │   ✔ guild
+            │   ✔ message
+            │   ✔ channel
+            ⎣   ✔ invite
+
+            ⎡ In Progress (8/13)
+            │ =================
+            │   ❌ role
+            │   ❌ friendship
+            │   ❌ notification
+            │   ❌ block
+            │   ❌ serverSettings
+            │   ❌ userSettings
+            │   ❌ history
+            ⎣   ❌ reports
+         -->
+
         <spotlight>
             <a href="guildModel.topic" type="server"/>
             <a href="userModel.topic" type="account"/>
         </spotlight>
 
         <primary>
-            <a href="channelModel.topic" type="location"/>
+            <a href="inviteModel.topic" type="location"/>
             <a href="messageModel.topic" type="community"/>
         </primary>
+
+        <secondary>
+            <a href="inviteModel.topic" type="documents"></a>
+            <a href="inviteModel.topic" type="documents"></a>
+        </secondary>
+
+        <misc>
+            <cards narrow="true">
+                <title>Other Models</title>
+                <a href="inviteModel.topic"/>
+                <a href="inviteModel.topic"/>
+                <a href="inviteModel.topic"/>
+                <a href="inviteModel.topic"/>
+                <a href="inviteModel.topic"/>
+                <a href="inviteModel.topic"/>
+                <a href="inviteModel.topic"/>
+            </cards>
+        </misc>
 
 
     </section-starting-page>
