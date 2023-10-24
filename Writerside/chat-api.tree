@@ -9,11 +9,16 @@
     <toc-element topic="overview.topic"/>
     <toc-element topic="intro.topic"/>
     <toc-element topic="dbModels.topic">
+        <toc-element topic="channelModel.topic"/>
         <toc-element topic="userModel.topic"/>
         <toc-element topic="guildModel.topic"/>
     </toc-element>
     <toc-element topic="apiEndpoints.topic">
         <toc-element topic="userRoutes.topic"/>
         <toc-element topic="guildRoutes.topic"/>
+    </toc-element>
+    <toc-element topic="tutorials.topic">
+        <toc-element topic="devEnvSetup.topic"/>
+        <toc-element topic="settingUpMongoDB.topic"/>
     </toc-element>
 </instance-profile>
