@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Dev Environment Setup" id="devEnvSetup">
+
+    <card-summary>How to get your environment set up.</card-summary>
+
+    <p>Before you can start developing, you need to set up your development environment. This topic describes how to do
+        that.</p>
+
+    <chapter title="Prerequisites" id="prerequisites">
+        <p>Before you can set up your development environment, you need to install the following:</p>
+
+        <list>
+            <li><a href="https://nodejs.org/en">Node.js</a> 18.0.0 or later <a href="#easier">*</a></li>
+            <li><a href="https://www.npmjs.com/">npm</a> 10.0.0 or later <a href="#easier">*</a></li>
+            <li><a href="https://git-scm.com/downloads">Git</a></li>
+        </list>
+
+        <p id="easier">* To make installing and managing Node.js versions easier, we recommend that you use <a
+                href="https://github.com/nvm-sh/nvm">Node Version Manager (nvm)</a>.</p>
+
+    </chapter>
+
+    <chapter title="Setting Up Your Environment" id="setup">
+        <p>After you have installed the prerequisites, you can set up your development environment.</p>
+
+        <tldr>
+            <p>Clone the <a href="https://github.com/kyvex-epic/chat">https://github.com/kyvex-epic/chat.git</a>
+                repository</p>
+            <p>Install the dependencies with <code>npm install</code></p>
+            <p>Complete the
+                <path>.env.example</path>
+                file
+            </p>
+        </tldr>
+
+        <p>First, clone the <a href="https://github.com/kyvex-epic/chat">chat</a> repository:</p>
+        <code-block lang="bash">
+            git clone https://github.com/kyvex-epic/chat.git
+            cd chat
+        </code-block>
+
+        <p>Then, install the dependencies:</p>
+        <code-block lang="bash">
+            npm install
+        </code-block>
+
+        <p>Complete the
+            <path>.env</path>
+            file:
+        </p>
+        <code-block lang="bash">
+            cp .env.example .env
+            vim .env # or whatever editor you prefer
+
+        </code-block>
+
+    </chapter>
+
+    <
+
+
+</topic>
