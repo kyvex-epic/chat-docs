@@ -22,7 +22,7 @@
             </li>
             <li>
                 <control>User authentication</control>
-                Kyvex Chat uses JSON Web Tokens (<code>JWT</code>) to authenticate users. Users can create an account,
+                Kyvex Chat uses Passpoty and JSON Web Tokens (<code>JWT</code>) to authenticate users. Users can create an account,
                 log in, and log out. Passwords are hashed and salted using <code>bcrypt</code>.
             </li>
             <li>
@@ -58,6 +58,10 @@
             <li>
                 <control>Mongoose</control>
                 An Object Data Modeling (ODM) library for MongoDB and Node.js.
+            </li>
+            <li>
+                <control>Passport</control>
+                An authentication middleware for Node.js.
             </li>
         </list>
     </chapter>
