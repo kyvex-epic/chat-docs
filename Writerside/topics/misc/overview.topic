@@ -17,6 +17,7 @@
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
         <spotlight>
             <a href="intro.topic" type="search">Read more</a>
+            <a href="tutorials.topic" type="check-list"/>
         </spotlight>
 
         <!--    Add several topics that are most important for this section.    -->
