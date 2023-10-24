@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Setting Up MongoDB" id="settingUpMongoDB" help-id="Setting-Up-MongoDB">
+
+
+    <p>This tutorial describes how to host MongoDB on a local machine or in the cloud.</p>
+
+    <chapter title="Hosting &amp; Installing MongoDB Locally" id="hosting-mongodb-locally">
+
+        <tip>This guide is adapted from the <a
+                href="https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/">official MongoDB
+            documentation</a>. We may have made some changes to the original text, such as omitting some details, adding
+            some notes, or reformatting the text.
+        </tip>
+        <warning>This assumes that you're using <b>Debian</b>, another <b>Debian-based</b> Linux distribution or <b>Ubuntu</b>. If you're using a
+            different Linux distribution, refer to the <a
+                href="https://docs.mongodb.com/manual/administration/install-on-linux/">official MongoDB
+                documentation</a>.
+        </warning>
+
+        <p>
+            This tutorial describes how to install MongoDB Community Edition on Debian, other Debian-based Linux distributions and
+            Ubuntu. If you wish to install the Enterprise Edition, refer to the
+            <a href="https://www.mongodb.com/try/download/enterprise">MongoDB Enterprise Server</a> documentation instead.
+        </p>
+
+        <chapter title="Import the Public Key" id="import-the-public-key">
+            <p>Import the public key used by the package management system.</p>
+
+            <p>Install <code>gnupg</code> and <code>curl</code> if they are not already installed.</p>
+            <code-block lang="bash">
+                sudo apt-get install gnupg curl
+            </code-block>
+
+            <p>Import the public key used by the package management system.</p>
+            <code-block lang="bash">
+                curl -fsSL https://pgp.mongodb.com/server-7.0.asc | \
+                  sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
+                   --dearmor
+            </code-block>
+
+        </chapter>
+
+        <chapter title="Creating a list file" id="creating-a-list-file">
+
+            <p>Create the list file
+                <path>/etc/apt/sources.list.d/mongodb-org-7.0.list.</path>
+            </p>
+
+            <tabs>
+
+                <tab title="Debian">
+                    <code-block lang="bash">
+                        echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ]
+                        https://repo.mongodb.org/apt/debian_DEBIAN/mongodb-org/7.0 multiverse" | sudo tee
+                        /etc/apt/sources.list.d/mongodb-org-7.0.list
+                    </code-block>
+
+                    <p>Replace <code>DEBIAN</code> with the codename of your Debian version, such as
+                        <code>buster</code> for Debian 10 (Buster).</p>
+
+                </tab>
+
+                <tab title="Ubuntu">
+                    <code-block lang="bash">
+                        echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ]
+                        https://repo.mongodb.org/apt/ubuntu UBUNTU/mongodb-org/7.0 multiverse" | sudo tee
+                        /etc/apt/sources.list.d/mongodb-org-7.0.list
+                    </code-block>
+
+                    <p>Replace <code>UBUNTU</code> with the name of your Ubuntu distribution, such as
+                        <code>bionic</code> for Ubuntu 18.04 LTS (Bionic Beaver).</p>
+                </tab>
+
+            </tabs>
+
+        </chapter>
+
+        <chapter title="Reload local package database" id="reload-local-package-database">
+            <p>Issue the following command to reload the local package database:</p>
+            <code-block lang="bash">
+                sudo apt-get update
+            </code-block>
+        </chapter>
+
+        <chapter title="Install the MongoDB packages" id="install-the-mongodb-packages">
+
+            <tabs>
+
+                <tab title="Install the latest stable version of MongoDB">
+                    <p>To install the latest stable version of MongoDB, issue the following command:</p>
+                    <code-block lang="bash">
+                        sudo apt-get install -y mongodb-org
+                    </code-block>
+                </tab>
+
+                <tab title="Install a specific release of MongoDB">
+                    <p>To install a specific release of MongoDB, specify each component package individually and append
+                        the version number to the package name, as in the following example:</p>
+                    <code-block lang="bash">
+                        sudo apt-get install -y mongodb-org=v.v.v mongodb-org-database=v.v.v mongodb-org-server=v.v.v
+                        mongodb-org-shell=v.v.v mongodb-org-mongos=v.v.v mongodb-org-tools=v.v.v
+                    </code-block>
+
+                    <p>Replace <code>v.v.v</code> with the version number of the desired MongoDB version.</p>
+
+                </tab>
+
+            </tabs>
+
+        </chapter>
+
+    </chapter>
+
+    <chapter title="Using MongoDB in the Cloud" id="using-mongodb-in-the-cloud">
+    </chapter>
+
+
+</topic>
