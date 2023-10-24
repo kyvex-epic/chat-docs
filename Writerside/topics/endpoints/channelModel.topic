@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       id="channelModel" title="Channel Model">
+
+    <link-summary>The Channel Model represents the structure and attributes of channels.</link-summary>
+
+    <title>Channel Model</title>
+    <p>The Channel Model defines the attributes and properties of channels used.</p>
+
+    <chapter title="Fields" id="fields" collapsible="false">
+        <title>Fields</title>
+
+        <deflist id="channel">
+
+            <def title="id">
+                <code>String</code><code>Primary Key</code>
+                <p>Unique identifier for the channel.</p>
+            </def>
+
+            <def title="name">
+                <code>String</code>
+                <p>Name of the channel.</p>
+            </def>
+
+            <def title="type">
+                <code>String</code> <code>Enum</code> <code>Required</code> <code>Default: text</code>
+                <p>Type of the channel, must be one of the following:</p>
+                <list>
+                    <li>text</li>
+                    <li>announcement</li>
+                    <li>forum</li>
+                    <li>media</li>
+                </list>
+            </def>
+
+            <def title="guild">
+                <code>relational</code> <code>Required</code>
+                <p>The guild this channel belongs to.</p>
+            </def>
+
+            <def title="parent">
+                <code>relational</code>
+                <p>The parent category of this channel.</p>
+            </def>
+
+        </deflist>
+
+        <deflist id="moderation">
+
+            <def title="slowmode">
+                <code>Integer</code> <code>Default: 0</code>
+                <p>Slowmode delay for this channel in seconds.</p>
+            </def>
+
+            <def title="nsfw">
+                <code>Boolean</code> <code>Default: false</code>
+                <p>Whether this channel is NSFW.</p>
+            </def>
+
+            <def title="autoArchiveDuration">
+                <code>Integer</code> <code>Default: 0</code>
+                <p>Duration in minutes to automatically archive this channel.</p>
+                <note>Only applicable to <code>forum</code> and <code>media</code> channels.</note>
+            </def>
+
+        </deflist>
+
+    </chapter>
+
+</topic>

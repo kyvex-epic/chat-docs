@@ -7,15 +7,17 @@
 
     <section-starting-page>
         <title>DB Models</title>
-        <description>
-            This section describes the API endpoints that are available for use.
-        </description>
+        <description>This section describes the API endpoints that are available for use.</description>
 
-        <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
         <spotlight>
             <a href="guildModel.topic" type="server"/>
             <a href="userModel.topic" type="user"/>
         </spotlight>
+
+        <primary>
+            <a href="channelModel.topic" type="location"/>
+            <a href="channelModel.topic" type="location"/>
+        </primary>
 
 
     </section-starting-page>
