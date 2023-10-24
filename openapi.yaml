@@ -1,0 +1,118 @@
+openapi: 3.0.0
+info:
+  title: Kyvex Chat API
+  description: API for Kyvex Chat, a Discord-like real-time chat application
+  version: 1.0.0
+servers:
+  - url: https://api.kyvexchat.com/v1
+    description: Production Server
+tags:
+  - name: Users
+    description: Operations related to user management
+  - name: Guilds
+    description: Operations related to guilds and channels
+paths:
+  /api/users/register:
+    post:
+      summary: Register a new user
+      description: Register a new user with their details.
+      tags:
+        - Users
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  description: The user's unique identifier, used for logging in
+                  type: string
+                displayName:
+                  description: This can be anything, it's just a display name
+                  type: string
+                password:
+                  description: The user's password. Must be at least 8 characters long
+                  type: string
+      responses:
+        'default':
+          description: Unexpected error
+        '200':
+          description: User registered successfully
+        '400':
+          description: Bad request, check the request payload
+  /api/users/login:
+    post:
+      summary: User login
+      description: Authenticate a user with their credentials.
+      tags:
+        - Users
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: User logged in successfully
+        '401':
+          description: Unauthorized, invalid credentials
+  /api/guilds/create:
+    post:
+      summary: Create a new guild
+      description: Create a new guild with the specified details.
+      tags:
+        - Guilds
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+      responses:
+        '200':
+          description: Guild created successfully
+        '400':
+          description: Bad request, check the request payload
+  /api/guilds/{guildId}:
+    get:
+      summary: Retrieve guild information
+      description: Get details of a specific guild by ID.
+      tags:
+        - Guilds
+      parameters:
+        - in: path
+          name: guildId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Guild details retrieved successfully
+        '404':
+          description: Guild not found
+  # Add more paths for other API endpoints.
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        username:
+          type: string
+        email:
+          type: string
+    Guild:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
