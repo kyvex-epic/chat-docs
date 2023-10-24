@@ -7,6 +7,6 @@
 <link-summary>This section describes the API endpoints for guild management.</link-summary>
 <card-summary>This section describes the API endpoints for guild management.</card-summary>
 
-<api-doc openapi-path="./../../openapi.yaml" tag="Guilds"></api-doc>
+<api-doc openapi-path="./../../../openapi.yaml" tag="Guilds"></api-doc>
 
 </topic>

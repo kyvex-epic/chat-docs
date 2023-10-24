@@ -7,6 +7,6 @@
 <link-summary>This section describes the API endpoints for the user management.</link-summary>
 <card-summary>This section describes the API endpoints for the user management.</card-summary>
 
-<api-doc openapi-path="./../../openapi.yaml" tag="Users"></api-doc>
+<api-doc openapi-path="./../../../openapi.yaml" tag="Users"></api-doc>
 
 </topic>
