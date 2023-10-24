@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<topic xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   title="User Routes"
-   id="userRoutes">
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       id="userRoutes" title="User Routes">
 
 <link-summary>This section describes the API endpoints for the user management.</link-summary>
 <card-summary>This section describes the API endpoints for the user management.</card-summary>

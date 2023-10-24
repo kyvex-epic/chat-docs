@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<topic xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   title="Guild Routes"
-   id="guildRoutes">
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       id="guildRoutes" title="Guild Routes">
 
 <link-summary>This section describes the API endpoints for guild management.</link-summary>
 <card-summary>This section describes the API endpoints for guild management.</card-summary>

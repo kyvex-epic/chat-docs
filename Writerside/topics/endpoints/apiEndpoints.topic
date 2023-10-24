@@ -27,6 +27,15 @@
             <a href="guildRoutes.topic" type="account"/>
         </spotlight>
 
+        <primary>
+            <a href="userRoutes.topic" type="account"/>
+            <a href="userRoutes.topic" type="account"/>
+        </primary>
+
+        <secondary>
+            <a href="userRoutes.topic" type="account"/>
+            <a href="userRoutes.topic" type="account"/>
+        </secondary>
 
     </section-starting-page>
 

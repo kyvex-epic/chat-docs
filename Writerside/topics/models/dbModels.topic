@@ -14,7 +14,7 @@
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
         <spotlight>
             <a href="guildModel.topic" type="server"/>
-            <a href="userModel.topic" type="account"/>
+            <a href="userModel.topic" type="user"/>
         </spotlight>
 
 
