@@ -12,46 +12,185 @@
 
 <p>The User Model is the model that represents the user in the database. It is used to store information about the user,
 such as their username, password, and email address.</p>
-<chapter title="Fields" id="fields" collapsible="true">
-<table>
-<tr><td>Field Name</td><td>Type</td><td>Description</td><td>Extra Info</td></tr>
-<tr><td><control>Account</control></td><td> </td><td> </td><td> </td></tr>
-<tr><td>id</td><td>Integer</td><td>The ID of the user.</td><td>Primary Key</td></tr>
-<tr><td>username</td><td>String</td><td>The username of the user.</td><td>Unique</td></tr>
-<tr><td>password</td><td>String</td><td>The password of the user.</td><td>8 char min</td></tr>
-<tr><td>display_name</td><td>String</td><td>The display name of the user.</td><td> </td></tr>
-<tr><td>pronouns</td><td>String</td><td>The pronouns of the user.</td><td> </td></tr>
-<tr><td>about_me</td><td>String</td><td>The about me of the user.</td><td> </td></tr>
-<tr><td><control>Relationships</control></td><td> </td><td> </td><td> </td></tr>
-<tr><td>messages</td><td>Relation</td><td>The messages sent by the user.</td><td>One to Many</td></tr>
-<tr><td>guilds</td><td>Relation</td><td>The guilds the user is in.</td><td>Many to Many</td></tr>
-<tr><td>friends</td><td>Relation</td><td>The friends of the user.</td><td>Many to Many</td></tr>
-<tr><td>friend_req</td><td>Relation</td><td>The friend requests of the user</td><td>Many to Many</td></tr>
-<tr><td><control>Timestamps</control></td><td> </td><td> </td><td> </td></tr>
-<tr><td>created_at</td><td>DateTime</td><td>The time the user was created.</td><td> </td></tr>
-<tr><td>updated_at</td><td>DateTime</td><td>The time the user was updated.</td><td> </td></tr>
-<tr><td>disabled</td><td>Boolean</td><td>Whether the user account is disabled.</td><td>Can only log in if true</td></tr>
-<tr><td><control>Customisation</control></td><td> </td><td> </td><td> </td></tr>
-<tr><td>status</td><td>String</td><td>The status of the user.</td><td> </td></tr>
-<tr><td>status_text</td><td>String</td><td>The status text of the user.</td><td> </td></tr>
-<tr><td>avatar</td><td>Binary</td><td>The avatar of the user.</td><td> </td></tr>
-<tr><td>banner</td><td>Binary</td><td>The banner of the user.</td><td> </td></tr>
-<tr><td><control>Verification</control></td><td> </td><td> </td><td> </td></tr>
-<tr><td>email</td><td>String</td><td>The email of the user.</td><td>Coming soon</td></tr>
-<tr><td>email_verified</td><td>Boolean</td><td>Whether the email is verified.</td><td>Coming soon</td></tr>
-<tr><td><control>Security</control></td><td> </td><td> </td><td> </td></tr>
-<tr><td>two_factor</td><td>Boolean</td><td>Whether two factor is enabled.</td><td>Coming soon</td></tr>
-<tr><td>two_factor_secret</td><td>String</td><td>The two factor secret.</td><td>Coming soon</td></tr>
-<tr><td><control>Misc</control></td><td> </td><td> </td><td> </td></tr>
-<tr><td>last_seen</td><td>DateTime</td><td>The last time the user was seen.</td><td> </td></tr>
-<tr><td>last_ip</td><td>String</td><td>The last IP the user was seen from.</td><td> </td></tr>
-<tr><td><control>Internal</control></td><td> </td><td> </td><td> </td></tr>
-<tr><td>admin</td><td>Boolean</td><td>Whether the user is an admin.</td><td> </td></tr>
-<tr><td>developer</td><td>Boolean</td><td>Whether the user is a developer.</td><td> </td></tr>
-<tr><td>contributor</td><td>Boolean</td><td>Whether the user is a contributor.</td><td> </td></tr>
-<tr><td>site_admin</td><td>Boolean</td><td>Whether the user is a site admin.</td><td> </td></tr>
-<tr><td>site_moderator</td><td>Boolean</td><td>Whether the user is a site moderator.</td><td> </td></tr>
-</table>
-</chapter>
+    <chapter title="User Model" id="user-model" collapsible="false">
+        <title>User Model</title>
+
+        <deflist id="Account" collapsible="false">
+
+            <def title="id">
+                <code>Integer</code><code>Primary Key</code>
+                <p>The ID of the user.</p>
+            </def>
+
+            <def title="username">
+                <code>String</code><code>Unique</code>
+                <p>The username of the user.</p>
+            </def>
+
+            <def title="password">
+                <code>String</code><code>8 char min</code>
+                <p>The password of the user.</p>
+            </def>
+
+            <def title="display_name">
+                <code>String</code>
+                <p>The display name of the user.</p>
+            </def>
+
+            <def title="pronouns">
+                <code>String</code>
+                <p>The pronouns of the user.</p>
+            </def>
+
+            <def title="about_me">
+                <code>String</code>
+                <p>The about me of the user.</p>
+            </def>
+
+        </deflist>
+
+        <deflist id="Relationships" collapsible="false">
+
+            <def title="messages">
+                <code>Relation</code><code>One to Many</code>
+                <p>The messages sent by the user.</p>
+            </def>
+
+            <def title="guilds">
+                <code>Relation</code><code>Many to Many</code>
+                <p>The guilds the user is in.</p>
+            </def>
+
+            <def title="friends">
+                <code>Relation</code><code>Many to Many</code>
+                <p>The friends of the user.</p>
+            </def>
+
+            <def title="friend_req">
+                <code>Relation</code><code>Many to Many</code>
+                <p>The friend requests of the user.</p>
+            </def>
+
+        </deflist>
+
+        <deflist id="Timestamps" collapsible="false">
+
+            <def title="created_at">
+                <code>DateTime</code>
+                <p>The time the user was created.</p>
+            </def>
+
+            <def title="updated_at">
+                <code>DateTime</code>
+                <p>The time the user was updated.</p>
+            </def>
+
+            <def title="disabled">
+                <code>Boolean</code><code>Can only log in if true</code>
+                <p>Whether the user account is disabled.</p>
+            </def>
+
+        </deflist>
+
+        <deflist id="Customisation" collapsible="false">
+
+            <def title="status">
+                <code>String</code>
+                <p>The status of the user.</p>
+            </def>
+
+            <def title="status_text">
+                <code>String</code>
+                <p>The status text of the user.</p>
+            </def>
+
+            <def title="avatar">
+                <code>Binary</code>
+                <p>The avatar of the user.</p>
+            </def>
+
+            <def title="banner">
+                <code>Binary</code>
+                <p>The banner of the user.</p>
+            </def>
+
+        </deflist>
+
+        <deflist id="Verification" collapsible="false">
+
+            <def title="verified">
+                <code>Boolean</code>
+                <p>Whether the user account is verified.</p>
+                <note>This field may not be used for a while.</note>
+            </def>
+
+            <def title="partnered">
+                <code>Boolean</code>
+                <p>Whether the user is a partner.</p>
+                <note>This field may not be used for a while.</note>
+            </def>
+
+        </deflist>
+
+        <deflist id="Security" collapsible="false">
+
+            <def title="two_factor">
+                <code>Boolean</code>
+                <p>Whether two-factor authentication is enabled.</p>
+                <note>Coming soon</note>
+            </def>
+
+            <def title="two_factor_secret">
+                <code>String</code>
+                <p>The two-factor authentication secret.</p>
+                <note>Coming soon</note>
+            </def>
+
+        </deflist>
+
+        <deflist id="Misc" collapsible="false">
+
+            <def title="last_seen">
+                <code>DateTime</code>
+                <p>The last time the user was seen.</p>
+            </def>
+
+            <def title="last_ip">
+                <code>String</code>
+                <p>The last IP the user was seen from.</p>
+            </def>
+
+        </deflist>
+
+        <deflist id="Internal" collapsible="false">
+
+            <def title="admin">
+                <code>Boolean</code>
+                <p>Whether the user is an admin.</p>
+            </def>
+
+            <def title="developer">
+                <code>Boolean</code>
+                <p>Whether the user is a developer.</p>
+            </def>
+
+            <def title="contributor">
+                <code>Boolean</code>
+                <p>Whether the user is a contributor.</p>
+            </def>
+
+            <def title="site_admin">
+                <code>Boolean</code>
+                <p>Whether the user is a site admin.</p>
+            </def>
+
+            <def title="site_moderator">
+                <code>Boolean</code>
+                <p>Whether the user is a site moderator.</p>
+            </def>
+
+        </deflist>
+    </chapter>
+
 
 </topic>
