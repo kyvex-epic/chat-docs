@@ -12,6 +12,7 @@
         <toc-element topic="messageModel.topic"/>
         <toc-element topic="channelModel.topic"/>
         <toc-element topic="userModel.topic"/>
+        <toc-element topic="inviteModel.topic"/>
         <toc-element topic="guildModel.topic"/>
     </toc-element>
     <toc-element topic="apiEndpoints.topic">

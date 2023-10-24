@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       id="inviteModel" title="Invite Model">
+
+    <card-summary>The invite model.</card-summary>
+
+    <chapter title="Invite Model" id="invite-model" collapsible="false">
+        <title>Invite Model</title>
+
+        <deflist id="Invite" collapsible="false">
+
+            <def title="id">
+                <code>Integer</code><code>Primary Key</code>
+                <p>The ID of the invite.</p>
+            </def>
+
+            <def title="code">
+                <code>String</code><code>Unique</code>
+                <p>The code of the invite.</p>
+            </def>
+
+            <def title="uses">
+                <code>Relation</code><code>One to Many</code>
+                <p>The uses of the invite.</p>
+            </def>
+
+            <def title="max_uses">
+                <code>Integer</code>
+                <p>The maximum number of times the invite can be used.</p>
+            </def>
+
+            <def title="expires_at">
+                <code>DateTime</code>
+                <p>The time the invite expires.</p>
+            </def>
+
+            <def title="guild">
+                <code>Relation</code><code>One to One</code>
+                <p>The guild the invite is for.</p>
+            </def>
+
+            <def title="inviter">
+                <code>Relation</code><code>One to One</code>
+                <p>The user who created the invite.</p>
+            </def>
+
+        </deflist>
+
+        <deflist id="Timestamps" collapsible="false">
+
+            <def title="created_at">
+                <code>DateTime</code>
+                <p>The time the invite was created.</p>
+            </def>
+
+            <def title="deleted_at">
+                <code>DateTime</code>
+                <p>The time the invite was deleted.</p>
+            </def>
+
+        </deflist>
+        <deflist id="Customisation" collapsible="false">
+
+            <def title="note">
+                <code>String</code>
+                <p>The note of the invite.</p>
+            </def>
+
+        </deflist>
+
+    </chapter>
+</topic>
