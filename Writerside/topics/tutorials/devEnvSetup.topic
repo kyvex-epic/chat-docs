@@ -17,10 +17,17 @@
             <li><a href="https://nodejs.org/en">Node.js</a> 18.0.0 or later <a href="#easier">*</a></li>
             <li><a href="https://www.npmjs.com/">npm</a> 10.0.0 or later <a href="#easier">*</a></li>
             <li><a href="https://git-scm.com/downloads">Git</a></li>
+            <li><a href="https://mongodb.com/">MongoDB</a> <a href="#mongodbGuide">**</a></li>
+            <li><a href="https://www.dicebear.com/">Dicebear</a>, either locally hosted or you can use their API</li>
         </list>
 
-        <p id="easier">* To make installing and managing Node.js versions easier, we recommend that you use <a
+        <p id="easier"><b>*</b> To make installing and managing Node.js versions easier, we recommend that you use <a
                 href="https://github.com/nvm-sh/nvm">Node Version Manager (nvm)</a>.</p>
+
+        <p id="mongodbGuide"><b>**</b> We wrote a guide on how to install MongoDB on Linux. You can find it
+            <a href="settingUpMongoDB.topic">here</a>, in a nice, dark mode environment. Not on Linux? You can find
+            the official MongoDB installation instructions
+            <a href="https://docs.mongodb.com/manual/installation/">here</a>, but prepare to be flashbang'd.</p>
 
     </chapter>
 
@@ -35,6 +42,7 @@
                 <path>.env.example</path>
                 file
             </p>
+
         </tldr>
 
         <p>First, clone the <a href="https://github.com/kyvex-epic/chat">chat</a> repository:</p>
@@ -58,9 +66,9 @@
 
         </code-block>
 
-    </chapter>
 
-    <
+
+    </chapter>
 
 
 </topic>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       id="roleModel" title="Role Model">
+
+    <link-summary>The Role Model represents the structure and attributes of roles.</link-summary>
+
+    <title>Role Model</title>
+    <p>The Role Model represents the structure and attributes of roles.</p>
+
+    <chapter title="Fields" id="fields" collapsible="false">
+        <title>Fields</title>
+
+        <deflist id="role">
+
+            <def title="id">
+                <code>Integer</code> <code>Primary Key</code>
+                <p>The unique identifier of the role.</p>
+            </def>
+
+            <def title="name">
+                <code>String</code>
+                <p>The name of the role.</p>
+            </def>
+
+            <def title="description">
+                <code>String</code>
+                <p>The description of the role.</p>
+            </def>
+
+            <def title="users">
+                <code>Relation</code> <code>One to Many</code>
+                <p>The users that have the role.</p>
+            </def>
+
+        </deflist>
+
+        <deflist id="timestamps">
+
+            <def title="created_at">
+                <code>Timestamp</code>
+                <p>The timestamp of the role's creation.</p>
+            </def>
+
+            <def title="updated_at">
+                <code>Timestamp</code>
+                <p>The timestamp of the role's last update.</p>
+            </def>
+
+        </deflist>
+
+        <warning>
+            <p>We're currently unsure about the system around permissions, so this is subject to change.</p>
+            <p>We will likely have it function in the same way to Discord's
+            <a href="https://en.wikipedia.org/wiki/Bitwise_operation">Bitwise</a> Permissions, but I have to
+            do more research into how they work.</p> <a href="https://stackoverflow.com/a/75775417/19320449">Explanation
+            from StackOverflow</a>
+
+        </warning>
+
+        <deflist id="permissions">
+
+
+            <def title="permissions_int">
+                <code>BigInt</code>
+                <p>The permissions that the role has, as an integer.</p>
+            </def>
+
+
+            <def title="permissions">
+                <code>Relation</code> <code>Many to Many</code>
+                <p>The permissions that the role has.</p>
+            </def>
+
+        </deflist>
+
+        <deflist id="customisation">
+
+            <def title="position">
+                <code>Integer</code>
+                <p>The position of the role in the role hierarchy.</p>
+            </def>
+
+            <def title="is_default">
+                <code>Boolean</code>
+                <p>Whether the role is the default role.</p>
+            </def>
+
+            <def title="is_gradient">
+                <code>Boolean</code> <code>Default: false</code>
+                <p>Whether the role has a gradient.</p>
+            </def>
+
+            <def title="colour">
+                <tip>Expects an integer from 0 to 255^3.</tip>
+                <code>Integer</code> <code>Default: 0</code> <code>Max: 255^3</code>
+                <p>The colour of the role.</p>
+            </def>
+
+            <def title="colour_end">
+                <tip>Expects an integer from 0 to 255^3.</tip>
+                <code>Integer</code> <code>Default: 0</code> <code>Max: 255^3</code>
+                <p>The end colour of the role.</p>
+            </def>
+
+        </deflist>
+
+    </chapter>
+
+</topic>

@@ -13,17 +13,17 @@
             13 Models Total
             ==================
 
-            ⎡ Completed (5/13)
+            ⎡ Completed (6/13)
             │ ==================
             │   ✔ user
             │   ✔ guild
             │   ✔ message
             │   ✔ channel
-            ⎣   ✔ invite
+            │   ✔ invite
+            ⎣   ✔ role
 
-            ⎡ In Progress (8/13)
+            ⎡ In Progress (7/13)
             │ =================
-            │   ❌ role
             │   ❌ friendship
             │   ❌ notification
             │   ❌ block
@@ -39,7 +39,7 @@
         </spotlight>
 
         <primary>
-            <a href="inviteModel.topic" type="location"/>
+            <a href="inviteModel.topic" type="navigation"/>
             <a href="messageModel.topic" type="community"/>
         </primary>
 

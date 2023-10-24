@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       id="templateModel" title="X Model">
+
+    <link-summary>The X Model ...</link-summary>
+
+    <title>X Model</title>
+    <p>The Message Model represents the structure and attributes of messages.</p>
+
+    <chapter title="Fields" id="fields" collapsible="false">
+        <title>Fields</title>
+
+        <deflist id="message">
+
+            <def title="something">
+                <code>String</code><code>Primary Key</code>
+                <p>Something about something.</p>
+            </def>
+
+        </deflist>
+
+    </chapter>
+
+</topic>
