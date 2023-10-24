@@ -7,6 +7,9 @@
                  start-page="overview.topic">
 
     <toc-element topic="overview.topic"/>
+    <toc-element topic="systems.topic">
+        <toc-element topic="permissions.topic"/>
+    </toc-element>
     <toc-element topic="intro.topic"/>
     <toc-element topic="dbModels.topic">
         <toc-element topic="userModel.topic"/>
@@ -16,7 +19,6 @@
         <toc-element topic="channelModel.topic"/>
         <toc-element topic="messageModel.topic"/>
     </toc-element>
-    <toc-element topic="templateModel.topic"/>
     <toc-element topic="apiEndpoints.topic">
         <toc-element topic="userRoutes.topic"/>
         <toc-element topic="guildRoutes.topic"/>

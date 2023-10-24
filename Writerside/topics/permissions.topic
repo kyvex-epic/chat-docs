@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="permissions" id="permissions">
+
+    <link-summary>Kyvex Chat uses a bitfield system to represent and combine permissions, with role hierarchy and
+        channel overrides.</link-summary>
+
+    <card-summary>
+        This document explains how permissions work in Kyvex Chat. Permissions are used to control who can do what in
+        the system. Permissions are represented using a bitfield system, and they can be combined using bitwise
+        operations. The role hierarchy and channel-specific overrides can also influence the final permissions
+        calculation.</card-summary>
+
+    <web-summary>
+        Kyvex Chat uses a bitfield system to represent permissions. This means that each permission is represented by a
+        single bit, and the permissions of a user or role are represented by a bitfield. Permissions can be combined
+        using bitwise operations, and the role hierarchy and channel-specific overrides can influence the final
+        permissions calculation.</web-summary>
+
+    <title>How do permissions work?</title>
+
+    <tip>This is a <b>technical explanation</b> of how permissions work. If you're looking for a more general
+        explanation, check out our user guide on permissions (link here, at some point).
+    </tip>
+
+    <warning>As Kyvex Chat is still in development, this document is subject to change.</warning>
+
+    <p id="dsad">Kyvex Chat uses a permission system similar to that of Discord, in that it uses a bitfield to represent
+        permissions. This allows for easy checking of permissions, and easy storage of permissions.</p>
+
+    <chapter title="How do bitfields work?" id="how-do-bitfields-work">
+
+        <list>
+
+            <li>
+                <control>Bit Representation</control>
+                <p>
+                    In a bitfield, each bit represents a permission. For example, the first bit represents the
+                    <code>ADMINISTRATOR</code> permission. If the bit is set to <code>1</code>, the permission is
+                    granted. If the bit is set to <code>0</code>, the permission is not granted.
+                </p>
+            </li>
+
+            <li>
+                <control>Binary Representation</control>
+                <p>
+                    Each bit in the bitfield is either <code>1</code> or <code>0</code>, which corresponds to a binary
+                    representation of the permission. With a <code>0</code> being <code>FALSE</code>, and a
+                    <code>1</code> being <code>TRUE</code>.
+                </p>
+            </li>
+
+            <li>
+                <control>Combining Permissions</control>
+                <p>
+                    To calculate the effective permissions of either a role or user, bitwise operations are used on
+                    the bitfields of the user and role. The bitwise operations used are <code>AND</code>,
+                    <code>OR</code>,
+                    and <code>NOT</code>:
+                </p>
+
+                <list>
+                    <li>
+                        <control>AND / <code>&amp;</code></control>
+                        <p>If a permission bit is set (1) in all of the user's roles, it is granted. If any role denies
+                            it (0), it is denied.</p>
+                    </li>
+
+                    <li>
+                        <control>OR / <code>|</code></control>
+                        <p>If a permission bit is set (1) in any of the user's roles, it is granted. If no role allows
+                            it, it is denied.</p>
+                    </li>
+
+                    <li>
+                        <control>NOT / <code>~</code></control>
+                        <p>This operation can be used to deny a specific permission even if it's allowed by other roles.
+                            Applying NOT to the bitfield will flip the bits (e.g., 1 becomes 0 and 0 becomes 1).</p>
+                    </li>
+
+                </list>
+
+            </li>
+
+            <li>
+                <control>Hierarchy and Overrides</control>
+                <p>
+                    The role hierarchy and channel-specific overrides can influence the final permissions calculation.
+                    For example, if a user has two roles with conflicting permissions, the role higher in the hierarchy
+                    will take precedence.
+                </p>
+            </li>
+
+        </list>
+    </chapter>
+
+    <p>
+        This is definitely an oversimplification of how permissions work, but it should give you a general idea.
+        See the <a href="#links">'See also'</a> section for more information.
+    </p>
+
+    <seealso id="links" style="links">
+
+        <category ref="related">
+            <a href="https://en.wikipedia.org/wiki/Bit_field">Bitfields on Wikipedia</a>
+            <a href="https://en.wikipedia.org/wiki/Bitwise_operation">Bitwise operations on Wikipedia</a>
+        </category>
+
+        <category ref="discord">
+            <a href="https://discord.com/developers/docs/topics/permissions">Discord's documentation on permissions</a>
+        </category>
+    </seealso>
+
+
+</topic>
