@@ -1,7 +1,12 @@
 <topic xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        title="About" id="about">
-    <card-summary>This information is displayed in the card on the starting page.</card-summary>
+
+    <card-summary>Kyvex Chat is a real-time messaging application reminiscent of Discord, crafted with Node.js, Express, Socket.io,
+    and MongoDB. We are committed to delivering Discord-like core functionality while prioritizing user data
+        security and privacy.</card-summary>
+
+
     <title>About</title>
     <p>Kyvex Chat is a real-time messaging application reminiscent of Discord, crafted with Node.js, Express, Socket.io,
         and MongoDB. We are committed to delivering Discord-like core functionality while prioritizing user data
