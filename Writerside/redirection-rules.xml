@@ -18,4 +18,8 @@
         <description>Created after removal of "API Routes" from api</description>
         <accepts>apiRoutes.html</accepts>
     </rule>
+    <rule id="1527a35a">
+        <description>Created after removal of "X Model" from Chat API</description>
+        <accepts>templateModel.html</accepts>
+    </rule>
 </rules>

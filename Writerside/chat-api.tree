@@ -12,6 +12,8 @@
     </toc-element>
     <toc-element topic="intro.topic"/>
     <toc-element topic="dbModels.topic">
+        <toc-element topic="notificationModel.topic"/>
+        <toc-element topic="friendshipModel.topic"/>
         <toc-element topic="userModel.topic"/>
         <toc-element topic="guildModel.topic"/>
         <toc-element topic="roleModel.topic"/>

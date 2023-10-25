@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Notification Model" id="notificationModel">
+
+    <card-summary>The notification model handles the notification messages that are sent to the user.</card-summary>
+    <link-summary>The notification model handles the notification messages that are sent to the user.</link-summary>
+    <web-summary>The notification model handles the notification messages that are sent to the user.</web-summary>
+
+    <title>Notification Model</title>
+    <p>The notification model handles the notification messages that are sent to the user.</p>
+
+    <chapter id="notificationModel">
+
+        <title>Fields</title>
+
+        <deflist id="notifications">
+
+            <def title="id" id="id">
+                <code>String</code><code>Primary Key</code>
+                <p>The unique identifier for the notification.</p>
+            </def>
+
+            <def title="target" id="target">
+                <code>Relationship</code> <code>Required</code>
+                <p>The user that the notification is sent to.</p>
+            </def>
+
+            <def title="title" id="title">
+                <code>String</code> <code>Required</code>
+                <p>The content of the notification.</p>
+            </def>
+
+            <def title="content" id="content">
+                <code>String</code> <code>Required</code>
+                <p>The content of the notification.</p>
+            </def>
+
+            <def title="read" id="read">
+                <code>Boolean</code> <code>Required</code> <code>Default: false</code>
+                <p>Whether the notification has been read by the user.</p>
+            </def>
+
+        </deflist>
+
+        <deflist id="timestamps">
+
+            <def title="created_at" id="created_at">
+                <code>Timestamp</code> <code>Required</code>
+                <p>The time that the notification was created.</p>
+            </def>
+
+            <def title="updated_at" id="updated_at">
+                <code>Timestamp</code> <code>Required</code>
+                <p>The time that the notification was last updated.</p>
+            </def>
+
+            <def title="read_at" id="read_at">
+                <code>Timestamp</code>
+                <p>The time that the notification was read by the user.</p>
+            </def>
+
+        </deflist>
+
+    </chapter>
+
+</topic>

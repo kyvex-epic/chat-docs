@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Friendship Model" id="friendshipModel" help-id="friendShipModel">
+
+
+    <link-summary>The Friendship Model defines the attributes and properties of friendships and is used for friend
+        request and to signify that two users are friends.</link-summary>
+    <web-summary>The Friendship Model defines the attributes and properties of friendships and is used for friend
+        request and to signify that two users are friends.</web-summary>
+    <card-summary>The Friendship Model defines the attributes and properties of friendships and is used for friend
+        request and to signify that two users are friends.</card-summary>
+
+    <title>Friendship Model</title>
+    <p>The Friendship Model defines the attributes and properties of friendships and is used for friend
+        request and to signify that two users are friends.</p>
+
+    <chapter id="fields" collapsible="false">
+
+        <title>Fields</title>
+
+        <deflist id="friendship">
+
+            <def title="id" id="id">
+                <code>String</code><code>Primary Key</code>
+                <p>The unique identifier for the friendship.</p>
+            </def>
+
+            <def title="user1" id="user1">
+                <code>Relationship</code><code>Required</code>
+                <p>The unique identifier for the first user in the friendship. Also the user who sent the friend
+                    request.</p>
+            </def>
+
+            <def title="user2" id="user2">
+                <code>Relationship</code><code>Required</code>
+                <p>The unique identifier for the second user in the friendship. Also the user who received the friend
+                    request.</p>
+            </def>
+
+            <def title="status" id="status">
+                <code>Relationship</code> <code>Required</code> <code>Default: Pending</code> <code>Enum</code>
+                <p>The status of the friendship. Can be one of the following:</p>
+                <list>
+                    <li>Pending</li>
+                    <li>Accepted</li>
+                    <li>Declined</li>
+                    <li>Blocked</li>
+                </list>
+            </def>
+
+        </deflist>
+
+        <deflist id="timestamps">
+
+            <def title="createdAt" id="createdAt">
+                <code>DateTime</code><code>Required</code><code>Default: Current DateTime</code>
+                <p>The date and time the friendship was created.</p>
+            </def>
+
+            <def title="updatedAt" id="updatedAt">
+                <code>DateTime</code><code>Required</code><code>Default: Current DateTime</code>
+                <p>The date and time the friendship was last updated.</p>
+            </def>
+
+        </deflist>
+
+        <deflist id="customisation">
+
+            <def title="text" id="text">
+                <code>String</code> <code>Default: null</code>
+                <p>The text that the user sent with the friend request, could be a hello message or a reason for the
+                    request.</p>
+
+                <warning>
+                    <p>This could possibly be abused by users to send spam or abuse to other users.</p>
+                    <p>We will likely not allow use of this in any official clients.</p>
+                </warning>
+            </def>
+
+        </deflist>
+
+
+    </chapter>
+
+</topic>

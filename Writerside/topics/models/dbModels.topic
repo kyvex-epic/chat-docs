@@ -13,20 +13,20 @@
             13 Models Total
             ==================
 
-            ⎡ Completed (6/13)
+            ⎡ Completed (8/12)
             │ ==================
-            │   ✔ user
-            │   ✔ guild
-            │   ✔ message
-            │   ✔ channel
-            │   ✔ invite
+            │   ✔ ✔ user
+            │   ✔ ✔ guild
+            │   ✔ ✔ message
+            │   ✔ ✔ channel
+            │   ✔ ✔ invite
+            │   ✔ ✔ friendship
+            │     > ✔ block (this was merged into friendship, type: block)
+            │   ✔ notification
             ⎣   ✔ role
 
-            ⎡ In Progress (7/13)
+            ⎡ In Progress (4/12)
             │ =================
-            │   ❌ friendship
-            │   ❌ notification
-            │   ❌ block
             │   ❌ serverSettings
             │   ❌ userSettings
             │   ❌ history
@@ -39,25 +39,19 @@
         </spotlight>
 
         <primary>
-            <a href="inviteModel.topic" type="navigation"/>
-            <a href="messageModel.topic" type="community"/>
+            <a href="messageModel.topic" type="navigation"/>
+            <a href="channelModel.topic" type="community"/>
         </primary>
 
         <secondary>
-            <a href="inviteModel.topic" type="documents"></a>
-            <a href="inviteModel.topic" type="documents"></a>
+            <a href="friendshipModel.topic" type="thumb-up"/>
+            <a href="inviteModel.topic" type="thumb-up"/>
         </secondary>
 
         <misc>
-            <cards narrow="true">
-                <title>Other Models</title>
-                <a href="inviteModel.topic"/>
-                <a href="inviteModel.topic"/>
-                <a href="inviteModel.topic"/>
-                <a href="inviteModel.topic"/>
-                <a href="inviteModel.topic"/>
-                <a href="inviteModel.topic"/>
-                <a href="inviteModel.topic"/>
+            <cards>
+                <a href="notificationModel.topic"/>
+                <a href="roleModel.topic"/>
             </cards>
         </misc>
 
